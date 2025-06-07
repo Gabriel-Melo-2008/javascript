@@ -1,0 +1,71 @@
+window.confirm('está gostando de js?') -> Aparece uma janela com ok e cancelar
+window.prompt('Qual o seu nome?') -> Aparece uma janela para digitar
+window.alert('Seja bem vindo '+ nome) -> Escreve um alerta na tela
+
+Para criar uma variavel básica -> var 'String'
+var nome =  window.prompt('Digite o seu nome: ') -> Variavel 'nome' recebe o valor digitad como string
+Para converter o valor para inteiro -> Number.parseInt('variavel')
+Para converter o valor para o real -> Number.parseFloat('variavel')
+Para converter o Número sem expecificar -> Number('variavel')
+Para converter um número para uma string -> String('número/var')
+Para converter um número para uma string -> 'número/var'.toString()
+
+Para escrever uma mensagem + variavel(is):
+Com contatenação -> 'Olá meu nome é' + varNome + 'tenho' + varIdade + 'Anos e Moro em' + varLocal 
+(utiliza as aspas)
+Formatar string -> `Olá meu nome é ${varNome} tenho ${varIdade} anos e moro em ${varLocal}`
+(utiliza o acento grave)
+
+'string'.length -> retorna o tamanho da string
+'string'.toUpperCase() -> retorna a string  com todos o caracteres maiusculos
+'string'.toLowerCase() -> retorna a string  com todos o caracteres minusculos
+
+document.write(`Seu nome tem ${nome.length} letras `) -> escreve no documento 
+document.writeln(`Seu nome tem ${nome.length} letras `) -> escreve no documento mas adiciona outra quebra de linha ou seja se adicionar outro document.write ele vai começar em outra linha
+
+n1.toFixed(2) = Adiciona casas decimais ao número
+n1.toFixed(2).replace('.',',') = Troca o ponto por virgula no número
+n1.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'}) -> adiciona o simbolo do real 
+
+Operadores:
++ = Soma
+- = Substração
+* = multiplicação
+/ = divisão
+% = resto da divisão
+** = potenciação
+
+Simplificação:
+x = número qualquer
+n = n + x -> n+=x
+n = n - x -> n-=x
+n = n * x -> n*=x
+n = n / x -> n/=x
+n = n % x -> n%=x
+n = n ** x -> n**=x
+
+incremento:
+só vai adicionar 1 ou subtrair
+pós
+n = n+1 -> n++
+n = n-1 -> n--
+pré
+n = n+1 -> ++n
+n = n-1 -> --n
+
+OPERADORES RELACIONAIS  (retorna TRUE/FALSE)
+> - maior que
+< - menor que
+>= - maior ou igual que
+<= - menor ou igual que
+== - igual
+!= - diferente
+
+identidade 
+=== - verifica se os valores e os tipos são iguais. 
+exemplo -> 5===5(true) 5=='5'(true) 5==='5'(false)
+
+OPERADORES LÓGICOS
+&& - and(e)
+|| - or(ou)
+! - not(não)
