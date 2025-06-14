@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com Dom</title>
+    <style>
+        body{
+            background-color: rgb(19, 138, 88);
+            color:#ffffff;
+            font: normal 18pt sans-serif;
+        }
+        #msg4{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em Java <Script></Script></p>
+    <div class="msg">clique em mim</div>
+    <div class="msg1">clique em mim</div>
+    <div name="msg2">clique em mim</div>
+    <div id="msg3">clique em mim</div>
+    <div class="msg4">clique em mim</div>
+    <div class="msg4">clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        corpo.style.background = '#2a2a2a'
+//------------------------------------------------------------------------------------//
+        var d1 = document.getElementsByTagName('div')[0]
+        var d2 = document.getElementsByClassName('msg1')[0]
+        var d3 = document.getElementsByName('msg2')[0]
+        var d4= document.getElementById('msg3')
+        var d5 = document.querySelectorAll('div.msg4')[1]
+        d1.innerText = 'aiiiiiiii'
+        d2.style.color = 'red'
+        d3.style.color = 'red'
+        d4.style.color = 'red'
+        d5.style.color = 'red'
+//------------------------------------------------------------------------------------//
+        var p1 = document.getElementsByTagName('p')[0] 
+        p1.innerHTML = 'oii'
+        p1.style.color = 'rgb(255,255,0)'
+        p1.style.fontStyle = 'italic'
+//------------------------------------------------------------------------------------//
+    </script>
+</body>
+</html>

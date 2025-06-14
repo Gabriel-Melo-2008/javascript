@@ -26,7 +26,8 @@ document.writeln(`Seu nome tem ${nome.length} letras `) -> escreve no documento 
 n1.toFixed(2) = Adiciona casas decimais ao número
 n1.toFixed(2).replace('.',',') = Troca o ponto por virgula no número
 n1.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'}) -> adiciona o simbolo do real 
-
+/--------------------------------------------------------------------------------------/
+/--------------------------------------------------------------------------------------/
 Operadores:
 + = Soma
 - = Substração
@@ -69,3 +70,45 @@ OPERADORES LÓGICOS
 && - and(e)
 || - or(ou)
 ! - not(não)
+/--------------------------------------------------------------------------------------/
+/--------------------------------------------------------------------------------------/
+document.getElementsByTagName() -> É utilizado para selecionar tags 
+Ex: document.getElementsByTagName('p') -> Vai selecionar todas as tags 'p'
+
+Ex2: document.getElementsByTagName('p')[0] -> Vai selecionar apenas a primeira tag 'p'
+obs:Para mudar qual tag p eu quero é só mudar o numero que esta entre []
+
+Ex3: var p1 = document.getElementsByTagName('p')[0] 
+document.write(p1.innerText) -> vai excrever o texto que esta na tag p
+
+Ex4: var p1 = document.getElementsByTagName('p')[0]
+document.write(p1.HTML) -> vai escrever o texto que está na tag p com a formatação
+
+Ex5: var p1 = document.getElementsByTagName('p')[0] 
+p1.innerText = 'Exemplo' -> vai mudar o texto desta na tag p para Exemplo
+
+Ex6: var p1 = document.getElementsByTagName('p')[0] 
+p1.style.color = 'blue' -> vai mudar a cor do texto que esta na tag p para azul 
+obs: posso colocar em Hexadecimal (#000000) ou em RGB (rgb(0,0,0))
+/--------------------------------------------------------------------------------------/
+/--------------------------------------------------------------------------------------/
+window.document.body -> seleciona o corpo do site
+var corpo = window.document.body  corpo.style.background('black') muda a cor do corpo
+
+document.getElementsById('msg') -> seleciona por id
+var d = document.getElementById('msg')
+obs: não precisa passar o [] 
+
+document.getElementsByName('msg') -> seleciona pelo name
+var d = document.getElementsByName('msg')[0]
+
+document.getElementsByClassName('msg') -> seleciona pela classe
+var d = document.getElementsClassName('msg')[0]
+
+var d = document.querySelector('div#msg') seleciona pela formatação do HTML id='#' class='.'
+obs: só pega o primeiro elemento da classe
+obs2:não precisa passar o [] 
+
+var d = document.querySelectorAll('div#msg') seleciona pela formatação do HTML id='#' class='.'
+obs:precisa passar o [] para selecionar o elemento
+
