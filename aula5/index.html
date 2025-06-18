@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite
+        }
+
+        .div {
+            background-color: rgba(240, 255, 255, 0.405);
+            padding: 50px;
+            border-radius: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #vel {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+
+        #vel::-webkit-outer-spin-button, #vel::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <h1>Sistema de Multas</h1>
+        <label for="vel">velocidade do carro:</label><br>
+        <input type="number" name="vel" id="vel">
+        <p>--------------------------------</p>
+        <input type="button" value="aperte" name="aperte">
+    </div>
+
+    <script>
+        var botao = document.getElementsByName('aperte')[0]
+        botao.addEventListener('click', clicar)
+        function clicar() {
+            var p = document.getElementsByTagName('p')[0]
+            var vel = document.getElementById('vel')
+            var velo = Number(vel.value)
+            if (velo <= 60) {
+                p.innerText = 'Você não foi multado'
+            } else {
+                p.innerText = 'Você foi multado'
+            }
+        }
+    </script>
+</body>
+
+</html>

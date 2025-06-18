@@ -2,14 +2,15 @@ window.confirm('está gostando de js?') -> Aparece uma janela com ok e cancelar
 window.prompt('Qual o seu nome?') -> Aparece uma janela para digitar
 window.alert('Seja bem vindo '+ nome) -> Escreve um alerta na tela
 
-Para criar uma variavel básica -> var 'String'
-var nome =  window.prompt('Digite o seu nome: ') -> Variavel 'nome' recebe o valor digitad como string
+Para criar uma variavel básica -> var nVariavel
+var nome =  window.prompt('Digite o seu nome: ') -> Variavel 'nome' recebe o valor digitado como string
 Para converter o valor para inteiro -> Number.parseInt('variavel')
 Para converter o valor para o real -> Number.parseFloat('variavel')
 Para converter o Número sem expecificar -> Number('variavel')
 Para converter um número para uma string -> String('número/var')
 Para converter um número para uma string -> 'número/var'.toString()
-
+________________________________________________________________________________________
+________________________________________________________________________________________
 Para escrever uma mensagem + variavel(is):
 Com contatenação -> 'Olá meu nome é' + varNome + 'tenho' + varIdade + 'Anos e Moro em' + varLocal 
 (utiliza as aspas)
@@ -26,8 +27,8 @@ document.writeln(`Seu nome tem ${nome.length} letras `) -> escreve no documento 
 n1.toFixed(2) = Adiciona casas decimais ao número
 n1.toFixed(2).replace('.',',') = Troca o ponto por virgula no número
 n1.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'}) -> adiciona o simbolo do real 
-/--------------------------------------------------------------------------------------/
-/--------------------------------------------------------------------------------------/
+________________________________________________________________________________________
+________________________________________________________________________________________
 Operadores:
 + = Soma
 - = Substração
@@ -70,10 +71,12 @@ OPERADORES LÓGICOS
 && - and(e)
 || - or(ou)
 ! - not(não)
-/--------------------------------------------------------------------------------------/
-/--------------------------------------------------------------------------------------/
+________________________________________________________________________________________
+________________________________________________________________________________________
+**********************************MODIFICAR ELEMENTOS**********************************
+
 document.getElementsByTagName() -> É utilizado para selecionar tags 
-Ex: document.getElementsByTagName('p') -> Vai selecionar todas as tags 'p'
+Ex: document.getElementsByTagName('p') -> Como esta elements precisa passar o []
 
 Ex2: document.getElementsByTagName('p')[0] -> Vai selecionar apenas a primeira tag 'p'
 obs:Para mudar qual tag p eu quero é só mudar o numero que esta entre []
@@ -90,8 +93,10 @@ p1.innerText = 'Exemplo' -> vai mudar o texto desta na tag p para Exemplo
 Ex6: var p1 = document.getElementsByTagName('p')[0] 
 p1.style.color = 'blue' -> vai mudar a cor do texto que esta na tag p para azul 
 obs: posso colocar em Hexadecimal (#000000) ou em RGB (rgb(0,0,0))
-/--------------------------------------------------------------------------------------/
-/--------------------------------------------------------------------------------------/
+________________________________________________________________________________________
+________________________________________________________________________________________
+**********************************SELECIONAR ELEMENTOS**********************************
+
 window.document.body -> seleciona o corpo do site
 var corpo = window.document.body  corpo.style.background('black') muda a cor do corpo
 
@@ -112,3 +117,37 @@ obs2:não precisa passar o []
 var d = document.querySelectorAll('div#msg') seleciona pela formatação do HTML id='#' class='.'
 obs:precisa passar o [] para selecionar o elemento
 
+/--------------------------------------------------------------------------------------/
+/--------------------------------------------------------------------------------------/
+/--------------------------------------------------------------------------------------/
+*Eventos*
+var area = document.getElementById('area')
+area.addEventListener('tipo do evento', nome da função)
+Ex:var area = document.getElementById('area')
+    area.addEventListener('click', clicar)
+    function clicar(){
+        area.innerText = 'oii'
+    }
+    Quando clicar na 'area' vai mudar o texto presente nela para oii
+
+Ex2:var area = document.getElementById('area')
+    area.addEventListener('mouseenter', entrar)
+    function entrar(){
+        area.style.color = 'red'
+    }
+    Quando o mouse entrar na 'area' vai mudar a cor do texto para vermelho
+
+Ex3:var area = document.getElementById('area')
+    area.addEventListener('mouseout', sair)
+    function sair(){
+        area.style.color = 'green'
+    }
+    Quando o mouse sair da 'area' vai mudar a cor do texto para verde
+________________________________________________________________________________________
+________________________________________________________________________________________
+CONDICIONAIS 
+if (condição){
+
+}else{
+
+}
