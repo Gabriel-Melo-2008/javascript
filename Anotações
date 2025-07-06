@@ -151,3 +151,30 @@ if (condição){
 }else{
 
 }
+
+Condições Multiplas
+switch (expressão){
+    case valor1:
+    comandos
+    break
+
+    case valor2:
+    comandos
+    break
+
+    case valor3:
+    comandos
+    break
+
+    case valor4:
+    comandos
+    break
+
+    case valor5:
+    comandos
+    break
+
+    default:
+    comandos
+    break
+}
