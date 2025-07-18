@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(116, 143, 255);
+    font: normal 15pt sans-serif;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+section{
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+div{
+    text-align: center;
+    padding: 8px;
+}
+footer{
+    text-align: center;
+    color: white;   
+}

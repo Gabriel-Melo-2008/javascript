@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgb(111, 111, 111);
+
+            overflow: hidden;
+            top:0px;
+            left: 0;
+            /*transform: translate(-50%, -50%);*/
+        }
+
+        .navegation{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+        }
+        .bar{
+            width: 10px;
+            height: 10px;
+            margin: 6px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        .bar:hover{
+            background-color: #fff;
+        }
+        
+        input{
+            display: none;
+        }
+        .slides{
+            width: 500%;
+            height: 100%;
+            display: flex;
+        }
+        .imagens{
+            width: 20%;
+            transition: .6s;
+        }
+        .i1{background-color: lightsalmon;}
+        .i2{background-color: lightblue;}
+        .i3{background-color: lightcoral;}
+        .i4{background-color: lightgreen;}
+        .i5{background-color: lightslategray;}
+
+        #sl1:checked ~ .i1{
+            margin-left: 0;
+        }
+        #sl2:checked ~ .i1{
+            margin-left: -20%;
+        }
+        #sl3:checked ~ .i1{
+            margin-left: -40%;
+        }
+        #sl4:checked ~ .i1{
+            margin-left: -60%;
+        }
+        #sl5:checked ~ .i1{
+            margin-left: -80%;
+        }
+
+        .imagem{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body onload="rolar">
+    <div class="content">
+        <!---->
+        <div class="slides">
+            <input type="radio" name="select" id="sl1" checked>
+
+            <input type="radio" name="select" id="sl2">
+
+            <input type="radio" name="select" id="sl3">
+
+            <input type="radio" name="select" id="sl4">
+
+            <input type="radio" name="select" id="sl5">
+
+            <!--Imagens-->
+            <div class="imagens i1">
+                <img src="Davifoto.webp" alt="" class="imagem">
+            </div>
+            <div class="imagens i2">
+                 <img src="Clebsonfoto.webp" alt="" class="imagem">
+            </div>
+            <div class="imagens i3">
+                <img src="Imagem do WhatsApp de 2025-07-10 à(s) 19.02.05_95763ff0.jpg" alt="" class="imagem">
+            </div>
+            <div class="imagens i4">
+                <img src="Imagem do WhatsApp de 2025-07-10 à(s) 19.06.23_73866ea2.jpg" alt="" class="imagem">
+            </div>
+            <div class="imagens i5">
+                <img src="Imagem do WhatsApp de 2025-07-10 à(s) 19.09.34_8c59fe33.jpg" alt="" class="imagem">
+            </div> 
+        </div>
+            <!--labels-->
+        <div class="navegation">
+            <label for="sl1" class="bar b1"></label>
+            <label for="sl2" class="bar b2"></label>
+            <label for="sl3" class="bar b3"></label>
+            <label for="sl4" class="bar b4"></label>
+            <label for="sl5" class="bar b5"></label>
+        </div>
+    </div>
+    <script>/*
+        var item1 = document.getElementsByClassName('i1')[0]
+        var margem = 0
+        setInterval(function rolar() {
+            margem -= 20
+            item1.style.marginLeft = margem + '%'
+            if (margem <= -80) {
+                margem = 20
+            }
+        }, 3000)*/
+    </script>
+</body>
+
+</html>

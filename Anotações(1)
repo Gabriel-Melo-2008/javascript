@@ -1,0 +1,76 @@
+Para pegar o valor da variavel do input ultilizar: nomedavariaveldoinput.value
+----------------------------------------------------------------------------------------
+Para pegar a hora atual:
+var variavel = new Date()
+console.log(`agora são ${variavel.getHours()}`)
+----------------------------------------------------------------------------------------
+Para pegar o dia da semana:
+var variavel = new Date()
+console.log(`agora são ${variavel.getDay()}`)
+obs: vai retornar um número referente ao dia ex: 0->Domingo, 1->Segunda, 2->Terça, etc
+----------------------------------------------------------------------------------------
+Para modificar uma imagem:
+var variavel = document.getElementsById('id') 
+variavel.src = 'caminhodaimagem'
+obs: não é obrigatorio ser por id pode ser outras formas
+----------------------------------------------------------------------------------------
+Para criar uma tag por javascript:
+var variavel = document.createElement('o nome da tag ex: img, a, p, etc')
+
+Para atribuir um atributo:
+variavel.setAttribute('O atributo ex:id;src;href' , "O que vai no atributo ex:link, img")
+
+Para exibir no site:
+Aonde_vai_ser_exibida_a_tag.appendChild(variavel)
+----------------------------------------------------------------------------------------
+Para pegar qual input radio eu escolhi
+var variavel = document.getElementsById(id_dos_radios)
+obs: posso pegar por outras maneiras não necessariamente por id
+if (variavel[0].checked){comando}
+else if (variavel[1].checked){comando}
+else (variavel[2].checked){comando}
+...
+----------------------------------------------------------------------------------------
+Para adicionar um valor e, alguma posição do array:
+var array = [v1, v2, v3]
+array[posicao] = vx
+obs: se colocar uma posição que existe o valor será substituído
+----------------------------------------------------------------------------------------
+Para colocar um valor no final do array:
+var array = [v1, v2, v3]
+array.push(vx)
+----------------------------------------------------------------------------------------
+Para pegar o tamanho do array:
+var array = [v1, v2, v3]
+array.length
+----------------------------------------------------------------------------------------
+Para ordenar o array:
+var array = [v1, v2, v3]
+array.sort()
+Exemplo:
+var array = [5, 8, 2, 9, 3]
+array.sort()
+console.log(array) // Resultado: [2, 3, 5, 8, 9]
+----------------------------------------------------------------------------------------
+Para imprimir os valores do array separadamente:
+var array = [v1, v2, v3]
+
+for (var i = 0; i < array.length; i++){
+    console.log(`A posição ${i} tem o valor ${array[i]}`)
+}
+
+*******************************************ou*********************************************************
+
+for (var i in array){
+    console.log(`A posição ${i} tem o valor ${array[i]}`)
+}  
+----------------------------------------------------------------------------------------
+Para buscar um valor especifico no array:
+var array = [v1, v2, v3]
+array.indexOf(vx)
+
+obs: o resultado será a a chave do valor dentro do array exemplo:
+var array = [5, 8, 2, 9, 3]
+console.log(array.indexOf(9)) // Resultado: 3
+
+obs2: se o valor não existir no array o resultado será -1

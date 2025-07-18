@@ -93,7 +93,7 @@ p1.innerText = 'Exemplo' -> vai mudar o texto desta na tag p para Exemplo
 Ex6: var p1 = document.getElementsByTagName('p')[0] 
 p1.style.color = 'blue' -> vai mudar a cor do texto que esta na tag p para azul 
 obs: posso colocar em Hexadecimal (#000000) ou em RGB (rgb(0,0,0))
-________________________________________________________________________________________
+
 ________________________________________________________________________________________
 **********************************SELECIONAR ELEMENTOS**********************************
 
@@ -116,9 +116,6 @@ obs2:não precisa passar o []
 
 var d = document.querySelectorAll('div#msg') seleciona pela formatação do HTML id='#' class='.'
 obs:precisa passar o [] para selecionar o elemento
-
-/--------------------------------------------------------------------------------------/
-/--------------------------------------------------------------------------------------/
 /--------------------------------------------------------------------------------------/
 *Eventos*
 var area = document.getElementById('area')
@@ -144,7 +141,6 @@ Ex3:var area = document.getElementById('area')
     }
     Quando o mouse sair da 'area' vai mudar a cor do texto para verde
 ________________________________________________________________________________________
-________________________________________________________________________________________
 CONDICIONAIS 
 if (condição){
 
@@ -166,15 +162,29 @@ switch (expressão){
     comandos
     break
 
-    case valor4:
-    comandos
-    break
-
-    case valor5:
-    comandos
-    break
+    ...
 
     default:
     comandos
     break
 }
+________________________________________________________________________________________
+Repetições
+*verifica a condição depois executa o comando
+while (condição){    
+}
+*executa o comando depois verifica a condição 
+do{
+
+}while(condição)
+**
+for(inicio;condição;incremento){
+}
+________________________________________________________________________________________
+Arrays
+É uma variavel que tem vários elementos cada elemento é composto pelo seu valor e por uma chave de identificação.
+Exemplo: var array = ['Gabriel', 'João', 'Maria']
+array[0] -> Gabriel
+array[1] -> João    
+array[2] -> Maria
+O que esta entre colchetes é a chave de identificação do elemento dentro do array e o primeiro elemento começa com a chave 0.
