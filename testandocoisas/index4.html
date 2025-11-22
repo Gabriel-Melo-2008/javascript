@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            height: 500px;
+            background-color: gray;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .display {
+            width: 100%;
+            margin: 0px 0px 200px 0px;
+        }
+
+        h1 {
+            height: 100px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: aliceblue;
+            line-height: 100px;
+            text-align: right;
+        }
+
+        .linha {
+            display: flex;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            margin: 3px;
+            background: rgb(187, 187, 187);
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="display">
+            <h1 class="nome"></h1>
+        </div>
+        <div class="linha linha1">
+            <button class="num">1</button>
+
+            <button class="num">2</button>
+
+            <button class="num">3</button>
+
+            <button class="operador">/</button>
+
+        </div>
+        <div class="linha linha2">
+            <button class="num">4</button>
+
+            <button class="num">5</button>
+
+            <button class="num">6</button>
+
+            <button class="operador">*</button>
+
+        </div>
+        <div class="linha linha3">
+            <button class="num">7</button>
+
+            <button class="num">8</button>
+
+            <button class="num">9</button>
+
+            <button class="operador">-</button>
+
+        </div>
+        <div class="linha linha4">
+            <button>.</button>
+
+            <button class="num">0</button>
+
+            <button>=</button>
+
+            <button class="operador">+</button>
+
+        </div>
+    </div>
+
+    <script>
+        let dispay = document.getElementsByClassName('nome')[0]
+        function apertar() {
+            const botoes = document.querySelectorAll('.num');
+
+            botoes.forEach(btn => {
+                btn.addEventListener('click', function () {
+
+                    const texto = this.innerText;
+
+                    dispay.innerHTML += texto;
+                });
+            });
+        }
+        apertar()
+    </script>
+</body>
+
+</html>

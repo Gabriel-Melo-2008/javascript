@@ -188,3 +188,31 @@ array[0] -> Gabriel
 array[1] -> João    
 array[2] -> Maria
 O que esta entre colchetes é a chave de identificação do elemento dentro do array e o primeiro elemento começa com a chave 0.
+________________________________________________________________________________________
+Funções
+function nomeDaFuncao(parametros){
+    ação: ação que a função vai executar
+    return: retorna o valor da função(opcional)
+}
+nomeDaFuncao(parametros) -> Chamada da função
+Exemplo:    
+function soma(a, b){
+    return a + b
+}
+var resultado = soma(5, 3) // Chamada da função com os parâmetros 5 e 3
+console.log(resultado) // Resultado: 8
+
+Também posso colocar valores padrão nos parâmetros da função caso não seja passado nenhum valor:
+function soma(a = 0, b = 0){
+    return a + b
+}
+RECURSIVIDADE
+Uma função pode chamar a si mesma, isso é chamado de recursividade.
+function fatorial(n){
+    if (n === 0 || n === 1){
+        return 1
+    } else {
+        return n * fatorial(n - 1)
+    }
+}
+________________________________________________________________________________________

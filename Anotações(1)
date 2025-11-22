@@ -36,6 +36,14 @@ var array = [v1, v2, v3]
 array[posicao] = vx
 obs: se colocar uma posição que existe o valor será substituído
 ----------------------------------------------------------------------------------------
+Para adicionar um valor em qualquer posição do array:
+var array = [v1, v2, v3]
+array.splice(posicao, 0, vx)
+posicao: posição que vai ser adicionado o valor
+0: não vai remover nenhum valor
+vx: valor que vai ser adicionado
+obs: se a posição não existir o valor será adicionado no final do array
+----------------------------------------------------------------------------------------
 Para colocar um valor no final do array:
 var array = [v1, v2, v3]
 array.push(vx)
